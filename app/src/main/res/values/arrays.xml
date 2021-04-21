@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="light_source">
+        <item>A</item>
+        <item>C</item>
+        <item>D50</item>
+        <item>D55</item>
+        <item>D65</item>
+        <item>D75</item>
+        <item>F1</item>
+        <item>F2</item>
+        <item>F3</item>
+        <item>F4</item>
+        <item>F5</item>
+        <item>F6</item>
+        <item>F7</item>
+        <item>F8</item>
+        <item>F9</item>
+        <item>F10</item>
+        <item>F11</item>
+        <item>F12</item>
+        <item>CWF</item>
+        <item>U30</item>
+        <item>DLF</item>
+        <item>NBF</item>
+        <item>TL83</item>
+        <item>TL84</item>
+        <item>U35</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="angle">
+        <item>2°</item>
+        <item>10°</item>
+    </string-array>
+    <string-array name="measure_mode">
+        <item>SCI</item>
+        <item>SCE</item>
+    </string-array>
+    <string-array name="color_space">
+        <item>lab(CIE)</item>
+        <item>lch(CIE)</item>
+        <item>lab(Hunter)</item>
+        <item>Luv</item>
+        <item>XYZ</item>
+        <item>Yxy</item>
+        <item>RGB</item>
+        <item>同色异谱</item>
+        <item>反射率</item>
+        <item>遮盖率</item>
+        <item>DENSITY(A)</item>
+        <item>DENSITY(T)</item>
+        <item>DENSITY(E)</item>
+        <item>DENSITY(M)</item>
+        <item>Munsell</item>
+        <item>Tint</item>
+        <item>白度</item>
+        <item>黄度</item>
+        <item>黑度</item>
+        <item>着色力/力份</item>
+        <item>色牢度</item>
+    </string-array>
+    <string-array name="color_diff">
+        <item>dE*ab</item>
+        <item>dE*ch</item>
+        <item>dE*00</item>
+        <item>dEcmc</item>
+        <item>dE*94</item>
+        <item>dEab(Hunter)</item>
+        <item>dE*uv</item>
+    </string-array>
+    <string-array name="auto_off_time">
+        <item>10min</item>
+        <item>20min</item>
+    </string-array>
+    <string-array name="back_light_time">
+        <item>1s</item>
+        <item>2s</item>
+    </string-array>
+</resources>

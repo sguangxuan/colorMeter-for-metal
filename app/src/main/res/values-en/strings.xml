@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="intent">Intent</string>
+    <string name="search_devices">SearchDevices</string>
+    <string name="black_adjust">BlackAdjust</string>
+    <string name="white_adjust">WhiteAdjust</string>
+    <string name="measure">Measure</string>
+    <string name="read_measure_data">Read MeasureData</string>
+    <string name="read_lab_measure_data">Read Lab MeasureData</string>
+    <string name="read_rgb_measure_data">Read RGB MeasureData</string>
+    <string name="get_standard_data_count">Get Standard Data Count</string>
+    <string name="get_standard_data_for_num">Get Standard Data For Num</string>
+    <string name="delete_all_standard_data">Delete All</string>
+    <string name="delete_standard_data_for_num">Delete Standard Data For Num</string>
+    <string name="post_standard_data_to_devices">Post Standard data to devices</string>
+    <string name="get_device_info">Get Device Info</string>
+    <string name="get_devices_power_info">Get Devices</string>
+    <string name="read_device_adjust_state">Read Device adjust state</string>
+    <string name="set_device_display_param">Device display param</string>
+    <string name="set_time">Set time</string>
+    <string name="set_tolerance">Set Tolerance</string>
+    <string name="connect">Connect</string>
+    <string name="connect_success">Connect Success</string>
+    <string name="success">success</string>
+    <string name="fail">fail</string>
+    <string name="hardware_error">Hardware error</string>
+    <string name="parsing_error">Parsing error</string>
+</resources>

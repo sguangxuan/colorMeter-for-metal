@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name" translatable="false">金属腐蚀评估</string>
+    <string name="intent">连接设备</string>
+    <string name="search_devices">搜索设备</string>
+    <string name="black_adjust">黑校准</string>
+    <string name="white_adjust">白校准</string>
+    <string name="measure">测量</string>
+    <string name="read_measure_data">读取测量数据</string>
+    <string name="read_lab_measure_data">读取测量Lab数据</string>
+    <string name="read_rgb_measure_data">读取测量RGB数据</string>
+    <string name="get_standard_data_count">获取标样总数</string>
+    <string name="get_standard_data_for_num">获取一条标样数据</string>
+    <string name="delete_all_standard_data">删除所有标样数据</string>
+    <string name="delete_standard_data_for_num">删除一条标样</string>
+    <string name="post_standard_data_to_devices">上传一条数据到仪器</string>
+    <string name="get_device_info">获取仪器信息</string>
+    <string name="get_devices_power_info">获取仪器电量信息</string>
+    <string name="read_device_adjust_state">读取仪器校准状态</string>
+    <string name="set_device_display_param">参数设置</string>
+    <string name="set_time">同步时间</string>
+    <string name="set_tolerance">容差设置</string>
+    <string name="connect">连接中</string>
+    <string name="connect_success">连接成功</string>
+    <string name="success">成功</string>
+    <string name="fail">失败</string>
+    <string name="hardware_error">硬件错误</string>
+    <string name="parsing_error">解析错误</string>
+    <string name="btn_whiteAdjust">白校准</string>
+    <string name="btn_blackAdjust">黑校准</string>
+    <string name="adjust">校准</string>
+    <string name="color">锈的颜色</string>
+    <string name="back">返回</string>
+    <string name="didnotAdjust">未校准</string>
+</resources>

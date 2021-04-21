@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.example.bluetoothsdkdemo.MainActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="@{activity.msg}"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_deviceState"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="@{activity.deviceState}"/>
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/tv_deviceState"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:text="@{activity.result}"/>
+
+        <TextView
+            android:id="@+id/tv_color"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/tv_result"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="@string/color"
+            android:background="@{activity.color}"/>
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_result">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/btn_intent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:onClick="@{()-> activity.intentTestActivity()}"
+                        android:text="@string/intent"
+                        android:visibility="@{activity.intentVis}"/>
+
+                    <Button
+                        android:id="@+id/btn_measure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:onClick="@{()-> activity.measure()}"
+                        android:text="@string/measure"
+                        android:visibility="@{activity.measureVis}"/>
+
+                    <Button
+                        android:id="@+id/btn_adjust"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:onClick="@{()-> activity.intentAdjustActivity()}"
+                        android:text="@string/adjust"
+                        android:visibility="@{activity.adjustVis}"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_bluetooth_info"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/colorAccent">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:text="@{activity.msg}"/>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_intent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.intentTestActivity()}"
+                    android:text="@string/intent" />
+
+                <Button
+                    android:id="@+id/btn_measure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.measure()}"
+                    android:text="@string/measure" />
+
+                <Button
+                    android:id="@+id/btn_adjust"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.intentAdjustActivity()}"
+                    android:text="@string/adjust" />
+
+                <Button
+                    android:id="@+id/btn_open_bluetooth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="打开蓝牙"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/btn_search_bluetooth_device"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.search()}"
+                    android:text="@string/search_devices" />
+
+                <Button
+                    android:id="@+id/btn_black_adjust"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.blackAdjust()}"
+                    android:text="@string/black_adjust" />
+
+                <Button
+                    android:id="@+id/btn_white_adjust"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.whiteAdjust()}"
+                    android:text="@string/white_adjust" />
+
+                <Button
+                    android:id="@+id/btn_measure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.measure()}"
+                    android:text="@string/measure" />
+
+                <Button
+                    android:id="@+id/btn_read_measure_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.getMeasureData()}"
+                    android:text="@string/read_measure_data" />
+
+                <Button
+                    android:id="@+id/btn_read_lab_measure_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.getLabMeasureData()}"
+                    android:text="@string/read_lab_measure_data" />
+
+                <Button
+                    android:id="@+id/btn_read_rgb_measure_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.getRgbMeasureData()}"
+                    android:text="@string/read_rgb_measure_data" />
+
+                <Button
+                    android:id="@+id/btn_get_standard_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()->activity.getStandardDataCount()}"
+                    android:text="@string/get_standard_data_count" />
+
+                <Button
+                    android:id="@+id/btn_get_standard_data_for_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()->activity.getStandardDataIndex()}"
+                    android:text="@string/get_standard_data_for_num" />
+
+                <Button
+                    android:id="@+id/btn_delete_all_standard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()->activity.deleteAllData()}"
+                    android:text="@string/delete_all_standard_data" />
+
+                <Button
+                    android:id="@+id/btn_delete_standard_data_for_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.deleteStandardDataIndex()}"
+                    android:text="@string/delete_standard_data_for_num" />
+
+
+                <Button
+                    android:id="@+id/btn_post_standard_to_device"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.postDataToDevice()}"
+                    android:text="@string/post_standard_data_to_devices" />
+
+                <Button
+                    android:id="@+id/btn_get_device_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.getDeviceInfo()}"
+                    android:text="@string/get_device_info" />
+
+                <Button
+                    android:id="@+id/btn_get_device_power_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.getDevicePowerInfo()}"
+                    android:text="@string/get_devices_power_info" />
+
+                <Button
+                    android:id="@+id/btn_read_device_adjust_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()->activity.getAdjustState()}"
+                    android:text="@string/read_device_adjust_state" />
+
+                <Button
+                    android:id="@+id/btn_set_power_management_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="设置电源管理时间"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_set_device_display_param"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.setDeviceDisplayParam()}"
+                    android:text="@string/set_device_display_param"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_set_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.syncTime()}"
+                    android:text="@string/set_time"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_set_tolerance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:onClick="@{()-> activity.setTolerance()}"
+                    android:text="@string/set_tolerance"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_get_sample_count_for_num_standard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="获取第N条标样下的试样总数"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_get_num_sample_data_for_num_standard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="获取第N条标样下第M条数据"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_delete_all_sample_data_for_num_standard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="删除第N条标样下的所有试样"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_delete_num_sample_data_for_num_standard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="删除第N条标样下第M条试样"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_close_bluetooth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="关闭蓝牙"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_auto_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="自动保存"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_manual_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="手动保存"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_set_bluetooth_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="设置蓝牙名称"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>-->
+</layout>

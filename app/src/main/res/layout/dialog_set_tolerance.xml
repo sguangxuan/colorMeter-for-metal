@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:background="@color/white"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.90999997" />
+
+            <TextView
+                android:id="@+id/tv_dL_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dL"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_dL"
+                app:layout_constraintEnd_toStartOf="@+id/et_dL"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dEcmc_title"
+                app:layout_constraintTop_toTopOf="@+id/et_dL" />
+
+            <EditText
+                android:id="@+id/et_dL"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="numberDecimal"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_da_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="da"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_da"
+                app:layout_constraintEnd_toStartOf="@+id/et_da"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dEcmc_title"
+                app:layout_constraintTop_toTopOf="@+id/et_da" />
+
+            <EditText
+                android:id="@+id/et_da"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="numberDecimal"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_dL" />
+
+            <TextView
+                android:id="@+id/tv_db_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="db"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_db"
+                app:layout_constraintEnd_toStartOf="@+id/et_db"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dEcmc_title"
+                app:layout_constraintTop_toTopOf="@+id/et_db" />
+
+            <EditText
+                android:id="@+id/et_db"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="numberDecimal"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_da" />
+
+            <TextView
+                android:id="@+id/tv_dc_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dc"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_dc"
+
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dEcmc_title"
+                app:layout_constraintTop_toTopOf="@+id/et_dc" />
+
+            <EditText
+                android:id="@+id/et_dc"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="numberDecimal"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_db" />
+
+            <TextView
+                android:id="@+id/tv_dH_titile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dH"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_dH"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dEcmc_title"
+                app:layout_constraintTop_toTopOf="@+id/et_dH" />
+
+            <EditText
+                android:id="@+id/et_dH"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="numberDecimal"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_dc" />
+
+            <TextView
+                android:id="@+id/tv_dEab_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dEab"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_dEab"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dEcmc_title"
+                app:layout_constraintTop_toTopOf="@+id/et_dEab" />
+
+            <EditText
+                android:id="@+id/et_dEab"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="numberDecimal"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_dH" />
+
+            <TextView
+                android:id="@+id/tv_dEch_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dEch"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_dEch"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dEcmc_title"
+                app:layout_constraintTop_toTopOf="@+id/et_dEch" />
+
+            <EditText
+                android:id="@+id/et_dEch"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="numberDecimal"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_dEab" />
+
+            <TextView
+                android:id="@+id/tv_dEcmc_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dEcmc"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_dEcmc"
+                app:layout_constraintEnd_toStartOf="@+id/et_dEcmc"
+                app:layout_constraintHorizontal_bias="0.84"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/et_dEcmc" />
+
+            <EditText
+                android:id="@+id/et_dEcmc"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="numberDecimal"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_dEch" />
+
+            <TextView
+                android:id="@+id/tv_de94_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dE94"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_dE94"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dEcmc_title"
+                app:layout_constraintTop_toTopOf="@+id/et_dE94" />
+
+            <EditText
+                android:id="@+id/et_dE94"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="numberDecimal"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_dEcmc" />
+
+            <TextView
+                android:id="@+id/tv_dE00_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="de00"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_dE00"
+                app:layout_constraintEnd_toStartOf="@+id/et_dE94"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_dEcmc_title"
+                app:layout_constraintTop_toTopOf="@+id/et_dE00" />
+
+            <EditText
+                android:id="@+id/et_dE00"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="numberDecimal"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_dE94" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

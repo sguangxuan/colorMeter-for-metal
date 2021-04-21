@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="700dp"
+        android:background="@color/white"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/btn_send"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_measure_mode_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="测量模式："
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/ns_measure_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_measure_mode_title"
+                    android:layout_toEndOf="@+id/tv_measure_mode_title"
+                    app:entries="@array/measure_mode"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_light_source_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tv_measure_mode_title"
+                    android:layout_alignStart="@+id/tv_measure_mode_title"
+                    android:text="光源："
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/ns_light_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/ns_measure_mode"
+                    android:layout_alignTop="@+id/tv_light_source_title"
+                    app:entries="@array/light_source" />
+
+                <TextView
+                    android:id="@+id/tv_second_light_source_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv_light_source_title"
+                    android:layout_alignStart="@+id/tv_light_source_title"
+                    android:text="第二光源："
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/ns_second_light_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/ns_measure_mode"
+                    android:layout_alignTop="@+id/tv_second_light_source_title"
+                    app:entries="@array/light_source" />
+
+                <TextView
+                    android:id="@+id/tv_angle_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv_second_light_source_title"
+                    android:layout_alignStart="@+id/tv_second_light_source_title"
+                    android:text="角度："
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/ns_angle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/ns_measure_mode"
+                    android:layout_alignTop="@+id/tv_angle_title"
+                    app:entries="@array/angle" />
+
+                <TextView
+                    android:id="@+id/tv_second_angle_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tv_angle_title"
+                    android:layout_alignStart="@id/tv_angle_title"
+                    android:text="第二角度："
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/ns_second_angle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/ns_measure_mode"
+                    android:layout_alignTop="@+id/tv_second_angle_title"
+                    app:entries="@array/angle" />
+
+                <TextView
+                    android:id="@+id/tv_color_space_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tv_second_angle_title"
+                    android:layout_alignStart="@+id/tv_second_angle_title"
+                    android:text="颜色空间："
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/ns_color_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/ns_measure_mode"
+                    android:layout_alignTop="@+id/tv_color_space_title"
+                    app:entries="@array/color_space" />
+
+                <TextView
+                    android:id="@+id/tv_color_diff_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tv_color_space_title"
+                    android:layout_alignStart="@+id/tv_color_space_title"
+                    android:text="色差公式："
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/ns_color_diff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/ns_measure_mode"
+                    android:layout_alignTop="@+id/tv_color_diff_title"
+                    app:entries="@array/color_diff" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.90999997" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
